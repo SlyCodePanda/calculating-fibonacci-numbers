@@ -21,6 +21,9 @@ int main()
 	inputParser ip;
 	inputParser *ptrIp = &ip;
 
+	Reverse rev;
+	Reverse *ptrRev = &rev;
+
 	getline ( cin, input );
 
 	// Takes the digi string and converts it to an integer and stores it in "digits".
@@ -48,6 +51,13 @@ int main()
 	cout << letters << endl;
 	cout << fn1 << endl;
 	cout << fn2 << endl;
+
+	cout << "First digit in digits: " << digits/100 << endl;
+
+	// Returns the digits integer reversed.
+	//int i = 0;
+	//int revDigits = ptrRev->reverseDigit( digits );
+	//cout << "Reversed Digits: " << revDigits << endl;
 
 	return 0;
 

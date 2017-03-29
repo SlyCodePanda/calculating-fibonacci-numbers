@@ -14,14 +14,12 @@ inputParser::inputParser()
 // gets and returns the parts of the inputted string into seperate strings.
 void inputParser::getDatString ( string input )
 {
-	int count;
 
-	// Stores the initial digits in the input string into the string "digits".
+	// Stores the initial digits in the input string into the string "d".
 	for ( int i = 0; i < input.length(); i++ )
 	{
 		if( input[i] > 0 ){
 			d += input[i];
-			count++;
 		}
 		if( input[i] == ' ' ){
 			break;
@@ -29,7 +27,7 @@ void inputParser::getDatString ( string input )
 	}
 
 	// Stores the letters from the input string in the string "letters".
-	for ( int j = count; j < input.length(); j++ )
+	for ( int j = d.length(); j < input.length(); j++ )
 	{
 		if( input[j] > 0 ){
 			l += input[j];
@@ -39,19 +37,30 @@ void inputParser::getDatString ( string input )
 		}
 	}
 
-	//cout << "khgikh " << count << endl;
+	int count = d.length() + l.length();
 
 	// Stores the numbers from the input string in the string "fn1".
 	for ( int k = count; k < input.length(); k++ )
 	{
-		//if( input[k] > 0 ){
-		//	fn1 += input[k];
-		//	count++;
-		//	cout << "New count total: " << count << endl;
-		//}
-		//if( input[k] == ' ' ){
-		//	break;
-		//}
+		if( input[k] > 0 ){
+			f1 += input[k];
+		}
+		if( input[k] == ' ' ){
+			break;
+		}
+	}
+
+	int newCount = d.length() + l.length() + f1.length();
+
+	// Stores the numbers from the input string in the string "fn2".
+	for ( int m = newCount; m < input.length(); m++ )
+	{
+		if( input[m] > 0 ){
+			f2 += input[m];
+		}
+		if( input[m] == ' ' ){
+			break;
+		}
 	}
 }
 

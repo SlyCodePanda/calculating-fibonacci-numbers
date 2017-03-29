@@ -38,9 +38,16 @@ int main()
 	std::istringstream buf2( n1.substr(0,9) );
 	buf2 >> fn1;
 
+	// Converts the last number in the input string to an integer and stores it in "fn2".
+	string n2 = ptrIp->getFn2();
+	std::istringstream buf3( n2.substr(0,9) );
+	buf3 >> fn2;
+
+	// prints out the values in the input string.
 	cout << digits << endl;
 	cout << letters << endl;
 	cout << fn1 << endl;
+	cout << fn2 << endl;
 
 	return 0;
 

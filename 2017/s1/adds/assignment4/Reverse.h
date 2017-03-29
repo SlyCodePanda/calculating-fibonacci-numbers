@@ -5,6 +5,8 @@ using namespace std;
 
 class Reverse
 {
+	int revDigi;
+	string revString;
 	
 	public:
 

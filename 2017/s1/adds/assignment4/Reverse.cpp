@@ -2,6 +2,7 @@
 #include <string>
 
 #include <sstream>
+#include <algorithm>
 
 #include "Reverse.h"
 
@@ -19,24 +20,30 @@ int Reverse::reverseDigit( int value )
 	string revStr;
 	int i = fwdStr.length()-1;
 
-//	for ( int i = fwdStr.length()-1; i > 0 ;i-- )
-
-	cout << "fwdStr in loop: " << fwdStr << endl;
+	// Append the last character in fwdStr to revStr.
+	cout << "fwdStr i: " << fwdStr[i] << endl;
 	revStr += fwdStr[i];
-	cout << "revStr in loop: " << revStr << endl;
+	cout << "revStr string: " << revStr << endl;
 
-	// Setting the string revStr to a integer variable.
+	// Setting the revStr to an integer called rev.
 	int rev;
 	if ( ! (istringstream(revStr) >> rev) ) rev = 0;
-	cout << "revStr: " << revStr << endl;
+	cout << "revStr int: " << rev << endl;
+	
+	fwdStr.erase ( fwdStr.end()-1 );
+	cout << "fwdStr: " << fwdStr << endl;
+
+	int thing;
+	if ( ! (istringstream(fwdStr) >> thing) ) thing = 0;
+
 	i--;
 
-	if ( revStr.length() == fwdStr.length() )
+	if ( fwdStr.length() == 0 )
 	{
 		return rev;
 	}
 	else{
-		reverseDigit( value );
+		reverseDigit( thing );
 	}
 }
 

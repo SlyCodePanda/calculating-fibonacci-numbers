@@ -52,12 +52,10 @@ int main()
 	cout << fn1 << endl;
 	cout << fn2 << endl;
 
-	cout << "First digit in digits: " << digits/100 << endl;
-
 	// Returns the digits integer reversed.
-	//int i = 0;
-	//int revDigits = ptrRev->reverseDigit( digits );
-	//cout << "Reversed Digits: " << revDigits << endl;
+	int i = 0;
+	int revDigits = ptrRev->reverseDigit( digits );
+	cout << "Reversed Digits: " << revDigits << endl;
 
 	return 0;
 

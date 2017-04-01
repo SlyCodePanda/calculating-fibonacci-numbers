@@ -50,8 +50,15 @@ int Reverse::reverseDigit( int value )
 // Takes in a string and reverses it's order.
 string Reverse::reverseString( string value )
 {
-	
+	if ( value.length() == 0 )
+	{
+		return "";
+	}
 
+	string last(1,value[value.length()-1]);
+	string rev = reverseString( value.substr(0,value.length()-1 ) );
+
+	return last+rev;
 }
 
 // Reverse class destructor.

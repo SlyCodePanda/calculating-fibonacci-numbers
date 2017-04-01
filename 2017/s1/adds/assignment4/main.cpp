@@ -56,6 +56,8 @@ int main()
 	int i = 0;
 	int revDigits = ptrRev->reverseDigit( digits );
 	cout << "Reversed Digits: " << revDigits << endl;
+	string revString = ptrRev->reverseString( letters );
+	cout << "Reversed String: " << revString << endl;
 
 	return 0;
 

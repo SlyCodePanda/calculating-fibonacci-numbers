@@ -4,7 +4,7 @@
 
 #include "inputParser.h"
 #include "Reverse.h"
-//#include "Fibonacci.h"
+#include "Fibonacci.h"
 //#include "EfficientFibonacci.h"
 
 using namespace std;
@@ -23,6 +23,9 @@ int main()
 
 	Reverse rev;
 	Reverse *ptrRev = &rev;
+
+	Fibonacci fib;
+	Fibonacci *ptrFib = &fib;
 
 	getline ( cin, input );
 
@@ -53,11 +56,14 @@ int main()
 	cout << fn2 << endl;
 
 	// Returns the digits integer reversed.
-	int i = 0;
 	int revDigits = ptrRev->reverseDigit( digits );
 	cout << "Reversed Digits: " << revDigits << endl;
 	string revString = ptrRev->reverseString( letters );
 	cout << "Reversed String: " << revString << endl;
+
+	// Returns the fn1 integer as it's Fibonacci number.
+	int fibDig = ptrFib->fib( fn1 );
+	cout << "Fibonacci: " << fibDig << endl;
 
 	return 0;
 

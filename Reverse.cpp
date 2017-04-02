@@ -15,36 +15,38 @@ Reverse::Reverse()
 // Takes in a integer and reverses it's order.
 int Reverse::reverseDigit( int value )
 {
+	
+	// End condition for the recurssion loop.
+	if ( value == 0 )
+	{
+		return 0;
+	}
+
 	// Setting the int value to a string variable.
 	string fwdStr = static_cast<ostringstream*>( &(ostringstream() << value) )->str();
-	string revStr;
-	int i = fwdStr.length()-1;
 
-	// Append the last character in fwdStr to revStr.
-	cout << "fwdStr i: " << fwdStr[i] << endl;
-	revStr += fwdStr[i];
-	cout << "revStr string: " << revStr << endl;
+	// Creates the string with the last character of fwdStr.
+	string last(1,fwdStr[fwdStr.length()-1]);
 
-	// Setting the revStr to an integer called rev.
-	int rev;
-	if ( ! (istringstream(revStr) >> rev) ) rev = 0;
-	cout << "revStr int: " << rev << endl;
-	
+	// Erases the last element of the fwdStr.
 	fwdStr.erase ( fwdStr.end()-1 );
-	cout << "fwdStr: " << fwdStr << endl;
 
-	int thing;
-	if ( ! (istringstream(fwdStr) >> thing) ) thing = 0;
+	int otherThing;
+	if( ! (istringstream(fwdStr) >> otherThing ) ) otherThing = 0;
 
-	i--;
+	int reverse = reverseDigit( otherThing );
 
-	if ( fwdStr.length() == 0 )
-	{
-		return rev;
-	}
-	else{
-		reverseDigit( thing );
-	}
+	// Creating a string version of reverse integer.
+	string sRev = static_cast<ostringstream*>( &(ostringstream() << reverse) )->str();
+
+	// Makes the last character first.
+	string thing = last+sRev;
+
+	// Creates an integer version of thing.
+	int newReverse;
+	if( ! (istringstream(thing) >> newReverse ) ) newReverse = 0;
+
+	return newReverse;
 }
 
 // Takes in a string and reverses it's order.

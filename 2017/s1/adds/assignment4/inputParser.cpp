@@ -15,8 +15,9 @@ inputParser::inputParser()
 void inputParser::getDatString ( string input )
 {
 
+	int length = input.length();
 	// Stores the initial digits in the input string into the string "d".
-	for ( int i = 0; i < input.length(); i++ )
+	for ( int i = 0; i < length; i++ )
 	{
 		if( input[i] > 0 ){
 			d += input[i];
@@ -27,7 +28,7 @@ void inputParser::getDatString ( string input )
 	}
 
 	// Stores the letters from the input string in the string "letters".
-	for ( int j = d.length(); j < input.length(); j++ )
+	for ( int j = d.length(); j < length; j++ )
 	{
 		if( input[j] > 0 ){
 			l += input[j];
@@ -40,7 +41,7 @@ void inputParser::getDatString ( string input )
 	int count = d.length() + l.length();
 
 	// Stores the numbers from the input string in the string "fn1".
-	for ( int k = count; k < input.length(); k++ )
+	for ( int k = count; k < length; k++ )
 	{
 		if( input[k] > 0 ){
 			f1 += input[k];
@@ -53,7 +54,7 @@ void inputParser::getDatString ( string input )
 	int newCount = d.length() + l.length() + f1.length();
 
 	// Stores the numbers from the input string in the string "fn2".
-	for ( int m = newCount; m < input.length(); m++ )
+	for ( int m = newCount; m < length; m++ )
 	{
 		if( input[m] > 0 ){
 			f2 += input[m];

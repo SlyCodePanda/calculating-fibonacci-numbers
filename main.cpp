@@ -9,7 +9,7 @@
 #include "inputParser.h"
 #include "Reverse.h"
 #include "Fibonacci.h"
-//#include "EfficientFibonacci.h"
+#include "EfficientFibonacci.h"
 
 using namespace std;
 
@@ -30,6 +30,9 @@ int main()
 
 	Fibonacci fib;
 	Fibonacci *ptrFib = &fib;
+
+	EfficientFibonacci effFib;
+	EfficientFibonacci *ptrEffFib = &effFib;
 
 	getline ( cin, input );
 
@@ -83,7 +86,18 @@ int main()
 	{
 		//cout << "Fibonacci number: " << endl;
 		cout << fibDig << " ";
-		cout << fibDig << endl;
+	}
+	else
+	{
+		cout << "ERROR" << " ";
+	}
+
+	int fibDig2 = ptrEffFib->effFib( fn1 );
+
+	if ( fn2 > 0 )
+	{
+		//cout << "Fibonacci number: " << endl;
+		cout << fibDig2 << endl;
 	}
 	else
 	{

@@ -22,6 +22,7 @@ int EfficientFibonacci::effFib( int n )
 	}
 	else
 	{
+		preValue.push_back(n);
 		return effFib( n-2 )+effFib( n-1 );
 	}
 }

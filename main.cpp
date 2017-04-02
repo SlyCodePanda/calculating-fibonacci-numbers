@@ -69,17 +69,26 @@ int main()
 	{
 		cout << "ERROR" << " ";
 	}
-	else
+	else if ( digits == 0 )
+	{
+		cout << 0 << " ";
+	}
+	else if ( digits > 0 )
 	{
 		//cout << "Reversed Digits: " << endl;
 		cout << revDigits << " ";
 	}
+	else
+	{
+		cout << "ERROR" << " ";
+	}
+
 
 	string revString = ptrRev->reverseString( letters );
 	cout << revString << " ";
 
 	// Returns the fn1 integer as it's Fibonacci number.
-	if ( fn1 > 0 )
+	if ( fn1 >= 0 )
 	{
 		int fibDig = ptrFib->fib( fn1 );
 		cout << fibDig << " ";
@@ -90,7 +99,7 @@ int main()
 	}
 
 	// Returns the fn2 integer as it's Fibonacci number.
-	if ( fn2 > 0 )
+	if ( fn2 >= 0 )
 	{
 		int fibDig2 = ptrEffFib->effFib( fn2 );
 		cout << fibDig2 << endl;

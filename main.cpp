@@ -67,19 +67,19 @@ int main()
 	}
 	else
 	{
-		cout << "Reversed Digits: " << endl;
+		//cout << "Reversed Digits: " << endl;
 		cout << revDigits << endl;
 	}
 
 	string revString = ptrRev->reverseString( letters );
-	cout << "Reversed String: " << endl;
+	//cout << "Reversed String: " << endl;
 	cout << revString << endl;
 
 	// Returns the fn1 integer as it's Fibonacci number.
 	if ( isdigit(fn1) )
 	{
 		int fibDig = ptrFib->fib( fn1 );
-		cout << "Fibonacci number: " << endl;
+		//cout << "Fibonacci number: " << endl;
 		cout << fibDig << endl;
 	}
 	else

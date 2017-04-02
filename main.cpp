@@ -76,15 +76,12 @@ int main()
 	}
 
 	string revString = ptrRev->reverseString( letters );
-	//cout << "Reversed String: " << endl;
 	cout << revString << " ";
 
 	// Returns the fn1 integer as it's Fibonacci number.
-	int fibDig = ptrFib->fib( fn1 );
-
 	if ( fn1 > 0 )
 	{
-		//cout << "Fibonacci number: " << endl;
+		int fibDig = ptrFib->fib( fn1 );
 		cout << fibDig << " ";
 	}
 	else
@@ -92,16 +89,16 @@ int main()
 		cout << "ERROR" << " ";
 	}
 
-	int fibDig2 = ptrEffFib->effFib( fn1 );
-
+	// Returns the fn2 integer as it's Fibonacci number.
 	if ( fn2 > 0 )
 	{
-		//cout << "Fibonacci number: " << endl;
+		int fibDig2 = ptrEffFib->effFib( fn2 );
 		cout << fibDig2 << endl;
 	}
 	else
 	{
-		cout << "ERROR" << " ";
+		cout << "ERROR" << endl;
+
 	}
 	
 

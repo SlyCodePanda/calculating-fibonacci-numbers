@@ -69,10 +69,6 @@ int main()
 	{
 		cout << "ERROR" << " ";
 	}
-	else if ( digits == 0 )
-	{
-		cout << 0 << " ";
-	}
 	else if ( digits > 0 )
 	{
 		//cout << "Reversed Digits: " << endl;

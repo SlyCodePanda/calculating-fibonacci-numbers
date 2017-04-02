@@ -12,7 +12,11 @@ EfficientFibonacci::EfficientFibonacci()
 // Takes in an integer and returns it's Fibonacci number.
 int EfficientFibonacci::effFib( int n )
 {
-	if( ( n == 1 )||( n == 2 ) )
+	if ( n == 0 )
+	{
+		return 0;
+	}
+	else if( ( n == 1 )||( n == 2 ) )
 	{
 		return 1;
 	}

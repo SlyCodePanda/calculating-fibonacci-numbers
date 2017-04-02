@@ -50,20 +50,20 @@ int main()
 	buf3 >> fn2;
 
 	// prints out the values in the input string.
-	cout << digits << endl;
-	cout << letters << endl;
-	cout << fn1 << endl;
-	cout << fn2 << endl;
+	//cout << digits << endl;
+	//cout << letters << endl;
+	//cout << fn1 << endl;
+	//cout << fn2 << endl;
 
 	// Returns the digits integer reversed.
 	int revDigits = ptrRev->reverseDigit( digits );
-	cout << "Reversed Digits: " << revDigits << endl;
+	cout << revDigits << endl;
 	string revString = ptrRev->reverseString( letters );
-	cout << "Reversed String: " << revString << endl;
+	cout << revString << endl;
 
 	// Returns the fn1 integer as it's Fibonacci number.
 	int fibDig = ptrFib->fib( fn1 );
-	cout << "Fibonacci: " << fibDig << endl;
+	cout << fibDig << endl;
 
 	return 0;
 

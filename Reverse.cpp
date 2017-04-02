@@ -19,7 +19,7 @@ int Reverse::reverseDigit( int value )
 	// End condition for the recurssion loop.
 	if ( value == 0 )
 	{
-		return 0;
+		return -1;
 	}
 
 	// Setting the int value to a string variable.
@@ -57,7 +57,7 @@ string Reverse::reverseString( string value )
 		return "";
 	}
 
-	string last(1,value[value.length()-1]);
+	string last(1,value[value.length()-2]);
 	string rev = reverseString( value.substr(0,value.length()-1 ) );
 
 	return last+rev;

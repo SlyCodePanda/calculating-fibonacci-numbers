@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 #include "inputParser.h"
 #include "Reverse.h"
@@ -50,24 +53,40 @@ int main()
 	buf3 >> fn2;
 
 	// prints out the values in the input string.
-	//cout << digits << endl;
-	//cout << letters << endl;
-	//cout << fn1 << endl;
-	//cout << fn2 << endl;
+	cout << digits << endl;
+	cout << letters << endl;
+	cout << fn1 << endl;
+	cout << fn2 << endl;
 
 	// Returns the digits integer reversed.
 	int revDigits = ptrRev->reverseDigit( digits );
-	cout << "Reversed Digits: " << endl;
-	cout << revDigits << endl;
+
+	if ( digits < 0 )
+	{
+		cout << "ERROR" << endl;
+	}
+	else
+	{
+		cout << "Reversed Digits: " << endl;
+		cout << revDigits << endl;
+	}
 
 	string revString = ptrRev->reverseString( letters );
 	cout << "Reversed String: " << endl;
 	cout << revString << endl;
 
 	// Returns the fn1 integer as it's Fibonacci number.
-	int fibDig = ptrFib->fib( fn1 );
-	cout << "Fibonacci number: " << endl;
-	cout << fibDig << endl;
+	if ( isdigit(fn1) )
+	{
+		int fibDig = ptrFib->fib( fn1 );
+		cout << "Fibonacci number: " << endl;
+		cout << fibDig << endl;
+	}
+	else
+	{
+		cout << "ERROR" << endl;
+	}
+	
 
 	return 0;
 
